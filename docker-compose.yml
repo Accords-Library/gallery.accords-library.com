@@ -22,14 +22,15 @@ services:
       #POSTGRES_DB: defaults to same as POSTGRES_USER
       #POSTGRES_PORT: 5432
       #LOG_SQL: 0 (1 for verbose SQL logs)
+      THREADS:
     volumes:
       - "${MOUNT_DATA}:/data"
       - "./server/config.yaml:/opt/app/config.yaml"
 
   client:
     #image: szurubooru/client:latest
-    image: szuruclient:latest
-    #build: ./client
+    #image: szuruclient:latest
+    build: ./client
     restart: unless-stopped
     depends_on:
       - server
