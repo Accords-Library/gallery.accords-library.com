@@ -8,6 +8,7 @@ services:
 
   server:
     image: szurubooru/server:latest
+    restart: unless-stopped
     depends_on:
       - sql
     environment:
@@ -26,7 +27,10 @@ services:
       - "./server/config.yaml:/opt/app/config.yaml"
 
   client:
-    image: szurubooru/client:latest
+    #image: szurubooru/client:latest
+    image: szuruclient:latest
+    #build: ./client
+    restart: unless-stopped
     depends_on:
       - server
     environment:

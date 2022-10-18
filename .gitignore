@@ -2,6 +2,10 @@
 config.yaml
 .env
 
+# Data folders
+booru_data
+sql_data
+
 # Client Development Artifacts
 */*_modules/
 client/public

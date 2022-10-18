@@ -1,5 +1,33 @@
 @import colors
 
+@media (max-width: 50rem)
+    .post-list
+        ul
+            display: block !important
+            column-width: 10em !important
+            column-gap: 2vmin !important
+        
+            li
+                min-height: unset !important
+                height: unset !important
+                width: 100% !important
+                margin: 0 0 2vmin 0 !important
+
+
+@media (max-width: 100vh)
+    .post-list
+        ul
+            display: block !important
+            column-width: 20vh !important
+            column-gap: 2vmin !important
+        
+            li
+                min-height: unset !important
+                height: unset !important
+                width: 100% !important
+                margin: 0 0 2vmin 0 !important
+
+
 .post-list
     ul
         list-style-type: none
@@ -16,10 +44,8 @@
             margin: 0 0.25em 0.5em 0.25em
             display: inline-block
             text-align: left
-            min-width: 10em
-            width: 12vw
             &:not(.flexbox-dummy)
-                min-height: 7.5em
+                min-height: 10em
                 height: 9vw
 
             .thumbnail-wrapper

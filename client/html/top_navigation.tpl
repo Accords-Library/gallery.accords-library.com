@@ -4,6 +4,7 @@
             --><span class="site-name"><%- ctx.name %></span><!--
             --><span class="toggle-icon"><i class="fa fa-bars"></i></span><!--
         --></button><!--
+        --><li data-name="return" class=""><a href="https://accords-library.com">↩ Return</span></a></li><!--
         --><% for (let item of ctx.items) { %><!--
             --><% if (item.available) { %><!--
                 --><li data-name='<%- item.key %>'><!--
